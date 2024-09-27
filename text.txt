@@ -1,0 +1,48 @@
+chapter 60 - The DOM : finding children.
+
+Quick recap: Parent-child relationship
+
+  In the previous chapter , we learned about the parent-child relationship in the DOM.
+
+  A parent element can contain multiple child elements , just like a <div> might contain several <p> or <span> elements.
+
+why Do   we need find children?
+
+   Imagine you're building a web application where you need to highlight all items in a 
+   list, change the style of every button within a form, or animate every image in a 
+   gallery. to do this , you need to know how to access those child elements.
+
+Finding children in the DOM   
+
+   The DOM Provides us with different ways to find children within a parent element.
+
+   we,ll explore two key properties today:
+
+   children: Return a live HTMLcollection of all child elements.
+   childnodes: Return a live NodeList of all child nodes, including text nodes, comments,etc.
+
+   NOTE : children return only element node (like <h2> ,<p> , <span>), ignoring text and comment nodes.
+
+Practicle Examples   
+  Example0:
+      index.html with example0-children.js
+      Explanation:
+          children returns only element nodes (like <h2> ,<p> , <span>), ignoring text and comment nodes.
+          we loop through each child and change its text color to blue.
+
+  Example1:        
+     index.html with example-childnodes.js
+     Explanation:
+       childnodes return all nodes, including text nodes and comments.
+       we use nodeType to check if a node is an element (where nodeType ==== 1), and 
+       change its background color .
+
+    NOTE : more on nodeType in the next chapter.
+
+    summary 
+
+    children : use when you need only element nodes and want to ignore text and comment nodes.
+
+    childnodes: use when you need to consider all nodes , including  text and comments.
+    understanding how to find and manipulate child elements opens up a wide range of
+    possibilities in web development.
